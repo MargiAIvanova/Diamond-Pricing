@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "diamond-pricing-453216",
+  "private_key_id": "5aa49e96f6082b731138a0831f64b3001d915abe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDzCivnq0ycUeuX\n+MhGBfYl7rsj5HQsFU6/aLSoU+plvb9R2U+qBW6t9HGahRZ2wrFYbEfkfPmkp9ni\nIOj80rIAv1lQOMm+1nigU/VQCqvgUT7R8FO5kdeDeQEAIyE1sDUTz3SQJQPvrNRf\nkuZDcSFynbnTnSHOnv+GdRf8imMg9q/cdrkmPiL9n4qNPgQNEG4RI0xAGI4ZxHHr\n7U7JXwuYQt3CZWvc8eQCJWpYCNTAeRMoxy6OB+izKM5eKKq9UtaiE2npTwv0S3qe\ngCzW17RporqhNMhwVg1BNNoFaYzI0ZQ6eVznKwulwtazGnMUjes+C5CTjdwsdzgT\ncHhybWAjAgMBAAECggEAAmudgvx1EjF2qS10a84aD3Kl28ul+d0Uda+Il7c45F5+\nuJqeF9FfXXghEYA1zbpOoyog5Sj2y379xSoSvUHT5/yqhQlWaQIgcr2jTx1sF3B3\nsbDfrz9r6AadI0U2SsnrHWa5gHNTQLXLP6W/iU29Ht5slVZBRJoswp1elHNEXXWn\n1CEkzLnJs0sACeIzqfb26yDxu/HdA/rnMQFOkaYGgxMFElIq/ioBZJycnun0YKFH\nfFotSvD0aOfswTy/BuAwLMuPoBSThmhXtFgOyoy+4prDE6oml+vMXoHfyfmvTiJx\nBpYnVc+5nUrHb0PcbUnWMlaKXHBD3OYq5SnUGHxsAQKBgQD7bs/rEbLiuaPcCuwb\nSvk/wB/JpWobp0fP1xPeVFIU3mqK50vZODZb3VHGLrqYmOkis3JuY9kAu76Chd0b\nLYTMJkT6kpFbWUqcIkzd5m9d+7tNmRAuwdqJPPA/W8zm0hk+78UrTRr034bdK3Xm\nU40rTqZsDb7wM0Fx1qoRS8PbAQKBgQD3dFSYALOddJt0HIFqp271A2eVmxnOB9SO\nxGBGPm1kHvbcZboi20EQ7Fe74bFbTd/pBQWodBaUmvo/4iqCX7yhw0wMHN9QxnZ/\nCHP5dGF/vQNE2zU8Chy98qcR9ix9PfHt3Go47/Bph5VhlgohF3QCBh4BGU4mWjYd\n1oJxv7FvIwKBgQC3ueyCmAdAd2iONQj8lJd3hxtzTMUxedYWwNIK51CnYTM3VvZs\nvw+xpxLHH4RIV4wcSEY49gsu5wG5/Llpz6Q3TUugUhOXTbMgTkwe5fDBG15twIg7\nsnnPSNFBawJaNHIwNCK+lnQ5NVEmMkjPyoPgfnNLh+vbN4j991+EjfmLAQKBgQCl\nsIT8Cmw6H9v/ER8utNG8yPzQ1bufkuqmdaMpJZ/FjF4rEQpjUH/uvvG34dUJl8k3\nk59IPgLomiS6Jcvk5AnAHq6K5cI5qcmqIZTWETE/gOXxcv3gJ707CoEHq9f6PEID\nzLRrT22gm6JQZ1B8++E3gbURc0o6r+jQbdOGKp66FQKBgBI1grGsxxwOnMbe+0Uh\nfE8XyKD9cgeA71xPAMG4frrW6Y69pX6hzpq+VWW1nsTKvLZH+rqzML73LnVNBzlk\naBCLTvrd+CaWD+Px/jaomdPT3lD/u6fAuIEWxdprmFuETs5CtEXnkeMPo0cEWlu0\n3lc30GU3kP57G8caT9Yn4wu4\n-----END PRIVATE KEY-----\n",
+  "client_email": "diamond-pricing@diamond-pricing-453216.iam.gserviceaccount.com",
+  "client_id": "105502283973238874344",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/diamond-pricing%40diamond-pricing-453216.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

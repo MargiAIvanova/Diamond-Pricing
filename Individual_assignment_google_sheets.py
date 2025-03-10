@@ -18,9 +18,7 @@ st.write("Individual Assignment by Margarita Ivanova")
 def get_google_sheet_data(sheet_name):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     # Streamlit Secrets
-    creds_dict = json.loads(st.secrets["google"])
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["google"], scope)
     client = gspread.authorize(creds)
 
     # Open the Google Sheet

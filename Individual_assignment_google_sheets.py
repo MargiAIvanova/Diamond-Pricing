@@ -6,6 +6,7 @@ import seaborn as sns
 import random
 import time
 import matplotlib.pyplot as plt
+import json
 
 
 
@@ -13,10 +14,13 @@ st.title("Diamonds Pricing\n___")
 st.header("Which diamond cut has the highest average price?")
 st.write("Individual Assignment by Margarita Ivanova")
 
-# Step 1: Connect to Google Sheets API
+# connect to Google Sheets API
 def get_google_sheet_data(sheet_name):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("google_creditentials.json", scope)
+    # Streamlit Secrets
+    creds_dict = json.loads(st.secrets["google"])
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+
     client = gspread.authorize(creds)
 
     # Open the Google Sheet
@@ -28,15 +32,15 @@ def get_google_sheet_data(sheet_name):
     
     return df
 
-# Step 2: Fetch live data from Google Sheets
+#  live data from Google Sheets
 SHEET_NAME = "Diamond Dataset" 
 df = get_google_sheet_data(SHEET_NAME)
 
-# Step 3: Display data table to verify
+# Display data table to ensure it's correct (specifically if it updates when we change something in the google sheets)
 st.write("Diamonds Pricing Data from Google Sheets:")
 st.dataframe(df)
 
-# Step 4: Define the Charts
+# create the Charts
 def create_chart_a():
     avg_prices = df.groupby("cut")["price"].mean().sort_values(ascending=False)
     fig, ax = plt.subplots()
@@ -62,7 +66,7 @@ def create_chart_b():
     st.pyplot(fig)
 
 
-# Step 5: Custom CSS for Styling Buttons
+# style the buttons - dark purple wiht white font and a black border when we hover on it it changes to a light purple 
 st.markdown("""
     <style>
     .stButton>button {
@@ -81,7 +85,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Step 6: Initialize session state variables
+# session state time setup
 if "chart" not in st.session_state:
     st.session_state.chart = None
 if "start_time" not in st.session_state:
@@ -91,31 +95,31 @@ if "response_time" not in st.session_state:
 if "last_response_time" not in st.session_state:
     st.session_state.last_response_time = None  
 
-# Step 7: Button to Show Random Chart
+# button1 to show a random chart
 if st.button("Show a Chart"):
     st.session_state.chart = random.choice(["A", "B"])  # Randomly pick a chart
     st.session_state.start_time = time.time()  # Start timing
 
-    # Save the last response time before resetting
+    # Save the last response time
     if st.session_state.response_time is not None:
         st.session_state.last_response_time = st.session_state.response_time
 
     # Reset response time for new attempt
     st.session_state.response_time = None  
 
-# Step 8: Display the Selected Chart
+# Display the chosen Chart
 if "chart" in st.session_state and st.session_state.chart:
     if st.session_state.chart == "A":
         create_chart_a()
     else:
         create_chart_b()
 
-    # Step 9: Second Button to Record New Response Time
+    # Button2 to Record New Response Time
     if st.button("I answered your question"):
         st.session_state.response_time = time.time() - st.session_state.start_time
         st.success(f"You took {st.session_state.response_time:.2f} seconds to answer.")
 
-# Step 10: Show Last Response Time
+# display the last response time for comparison 
 if st.session_state.last_response_time is not None:
     st.write(f"Your last response time: {st.session_state.last_response_time:.2f} seconds")
 

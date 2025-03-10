@@ -1,0 +1,9 @@
+streamlit
+gspread
+pandas
+oauth2client
+seaborn
+matplotlib
+random
+time
+oauth2client
